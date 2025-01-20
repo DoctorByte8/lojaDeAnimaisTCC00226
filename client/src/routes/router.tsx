@@ -6,9 +6,9 @@ import LoginPage from "../pages/LoginPage";
 import CadastroDeProdutosPage from "../pages/CadastroDeProdutosPage";
 import CarrinhoPage from "../pages/CarrinhoPage";
 import ErrorPage from "../pages/ErrorPage";
-import ProductPage from "../pages/ProductPage";
 import CardsDeProdutosPage from "../pages/CardsDeProdutosPage";
 import PrivateRoutes from "./PrivateRoutes";
+import ProdutoPage from "../pages/ProdutoPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +25,9 @@ const router = createBrowserRouter([
       },
       { path: "listar-produtos", element: <ListaDeProdutosPage /> },
       { path: "login", element: <LoginPage /> },
-      { path: "produto", element: <ProductPage /> },
+      { path: "produto/:produtoidstring", element: <ProdutoPage/>
+      }
+
     ],
   },
   {

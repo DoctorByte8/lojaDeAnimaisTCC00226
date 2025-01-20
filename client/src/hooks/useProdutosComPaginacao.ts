@@ -13,6 +13,9 @@ interface QueryString {
 const useProdutosComPaginacao = (queryString: QueryString) => {
   const { recuperarPagina } = useAPI<Produto>(URL_PRODUTOS);
 
+  //const campo = getCampo(campo)
+
+
   return useQuery({
     queryKey: ["produtos", "paginacao", queryString],
     queryFn: () =>

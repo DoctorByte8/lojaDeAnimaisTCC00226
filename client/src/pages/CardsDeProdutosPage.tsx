@@ -1,7 +1,7 @@
 import InfiniteScroll from "react-infinite-scroll-component";
+import {useNavigate, useParams} from "react-router-dom";
 import Card from "../components/Card";
 import useProdutosPaginadosPeloNomeDaCategoria from "../hooks/useProdutosPaginadosPeloNomeDaCategoria";
-import { useParams, useNavigate } from "react-router-dom";
 
 const primeiraLetraMaiuscula = (palavra: string) => {
   return palavra.charAt(0).toUpperCase() + palavra.slice(1);
@@ -9,7 +9,7 @@ const primeiraLetraMaiuscula = (palavra: string) => {
 const CardsDeProdutosPage = () => {
   const tamanho = 18;
   const { nomeCategoria } = useParams();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // InstÃ¢ncia do navegador
 
   const {
     data,
@@ -35,7 +35,7 @@ const CardsDeProdutosPage = () => {
       <div className="row">
         {data.pages.map((page) =>
           page.itens.map((produto) => (
-            <div key={produto.id} onClick={() => navigate(`/produto`)} className="col-xl-2 col-md-3 col-sm-4 col-6">
+            <div key={produto.id} onClick={() => navigate(`/produto/${produto.id}`)} className="col-xl-2 col-md-3 col-sm-4 col-6">
               <Card
                 imagem={produto.imagem}
                 titulo={produto.nome}

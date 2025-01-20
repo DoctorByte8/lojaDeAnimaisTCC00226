@@ -1,13 +1,13 @@
 import useProdutosComPaginacao from "../hooks/useProdutosComPaginacao";
-import useOrderStore from "../store/useOrderStore";
 import useProdutosStore from "../store/useProdutosStore";
+import useOrderStore from "../store/useOrderStore.ts";
 
 const Paginacao = () => {
   const pagina = useProdutosStore((s) => s.pagina);
   const tamanho = useProdutosStore((s) => s.tamanho);
   const nome = useProdutosStore((s) => s.nome);
-  const ordem = useOrderStore((s) => s.order);
-  const campo = useOrderStore((s) => s.campo);
+  const ordem = useOrderStore((s) =>s.order);
+  const campo = useOrderStore((s)=> s.campo);
 
   const setPagina = useProdutosStore((s) => s.setPagina);
 
@@ -19,7 +19,7 @@ const Paginacao = () => {
     data: resultadoPaginado,
     isPending: carregandoProdutos,
     error: errorProdutos,
-  } = useProdutosComPaginacao({ pagina, tamanho, nome, campo, ordem });
+  } = useProdutosComPaginacao({ pagina, tamanho, nome, ordem, campo});
 
   if (carregandoProdutos) return <h6>Carregando...</h6>;
   if (errorProdutos) throw errorProdutos;

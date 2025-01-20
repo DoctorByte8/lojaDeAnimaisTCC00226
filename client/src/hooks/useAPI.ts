@@ -25,7 +25,17 @@ const useAPI = <T>(endpoint: string) => {
         throw error;
       });
 
-  const recuperarPagina = (config: AxiosRequestConfig) =>
+    const recuperarid = (id: number) =>
+        axiosInstance
+            .get<T>(endpoint + "/" + id)
+            .then((res) => res.data)
+            .catch((error) => {
+                tratarErro(error);
+                throw error;
+            });
+
+
+    const recuperarPagina = (config: AxiosRequestConfig) =>
     axiosInstance
       .get<ResultadoPaginado<T>>(endpoint + "/paginacao", config)
       .then((res) => res.data)
@@ -76,6 +86,6 @@ const useAPI = <T>(endpoint: string) => {
     }
   };
 
-  return { recuperar, remover, recuperarPagina, cadastrar, alterar };
+  return { recuperar, remover, recuperarPagina, cadastrar, alterar,recuperarid };
 };
 export default useAPI;

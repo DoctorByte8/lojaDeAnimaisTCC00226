@@ -2,25 +2,28 @@ import dayjs from "dayjs";
 import useProdutosComPaginacao from "../hooks/useProdutosComPaginacao";
 import useRemoverProduto from "../hooks/useRemoverProduto";
 import useProdutosStore from "../store/useProdutosStore";
-import useProdutosRemovendoStore from "../store/useProdutoRemovendoStore.ts";
 import useProdutoRemovendoStore from "../store/useProdutoRemovendoStore.ts";
 import Produto from "../interfaces/Produto.ts";
 import TableHeader from "./TableHeader.tsx";
-import useOrderStore from "../store/useOrderStore";
+import useOrderStore from "../store/useOrderStore.ts";
+import {useNavigate} from "react-router-dom";
 
 const TabelaDeProdutos = () => {
   const pagina = useProdutosStore((s) => s.pagina);
   const tamanho = useProdutosStore((s) => s.tamanho);
   const nome = useProdutosStore((s) => s.nome);
-  const ordem = useOrderStore((s) => s.order);
-  const campo = useOrderStore((s) => s.campo);
+  const ordem = useOrderStore((s) =>s.order);
+  const campo = useOrderStore((s)=> s.campo)
+  const navigate = useNavigate();
 
   const setPagina = useProdutosStore((s) => s.setPagina);
   const setProdutoSelecionado = useProdutosStore(
     (s) => s.setProdutoSelecionado
   );
 
-  const produdoRemovendo = useProdutosRemovendoStore((s) => s.produtoRemovendo);
+
+
+  const produdoRemovendo = useProdutoRemovendoStore((s) => s.produtoRemovendo);
   const setProdutoRemovendo = useProdutoRemovendoStore((s) => s.setProdutoRemovendo);
 
   const {
@@ -33,7 +36,7 @@ const TabelaDeProdutos = () => {
     data: resultadoPaginado,
     isPending: carregandoProdutos,
     error: errorProdutos,
-  } = useProdutosComPaginacao({ pagina, tamanho, nome, campo, ordem });
+  } = useProdutosComPaginacao({pagina, tamanho, nome, campo, ordem});
 
   if (carregandoProdutos) return <h6>Carregando...</h6>;
   // if(removendoProduto) return <h6>Removendo...</h6>
@@ -56,11 +59,11 @@ const TabelaDeProdutos = () => {
       <table className="table table-hover table-bordered table-sm">
         <thead>
           <tr>
-            <TableHeader titulo="Id" />
+            <th className="align-middle text-center"><TableHeader titulo={"Id"}/></th>
             <th className="align-middle text-center">Imagem</th>
-            <TableHeader titulo="Categoria" />
-            <TableHeader titulo="Nome" />
-            <TableHeader titulo="Data de Cadastro" />
+            <th className="align-middle text-center"><TableHeader titulo={"Categoria"}/></th>
+            <th className="align-middle text-center"><TableHeader titulo={"Nome"}/></th>
+            <th className="align-middle text-center"><TableHeader titulo={"Data de Cadastro"}/></th>
             <th className="align-middle text-center">Quantidade</th>
             <th className="align-middle text-center">Preço</th>
             <th className="align-middle text-center">Ação</th>
@@ -80,7 +83,11 @@ const TabelaDeProdutos = () => {
               </td>
               <td width={"20%"} className="align-middle ps-3">
                 <a
-                  onClick={() => setProdutoSelecionado(produto)}
+                  onClick={() => {
+                    setProdutoSelecionado(produto)
+                    navigate(`/cadastrar-produto`)
+                  }
+                  }
                   className="link_underline"
                 >
                   {produto.nome}
@@ -100,6 +107,7 @@ const TabelaDeProdutos = () => {
                 })}
               </td>
               <td width={"13%"} className="align-middle text-center">
+
                 {produdoRemovendo.id === produto.id ?
                     (<div className="spinner-border spinner-border-sm" role="status">
                 </div>)

@@ -17,6 +17,15 @@ const useAPIProduto = () => {
         throw error;
       });
 
+const recuperarUmProduto = () =>
+    axiosInstance
+        .get<Produto>(URL_PRODUTOS /*+ (produto ? "/produtos" + produto : "")*/)
+        .then((res) => res.data)
+        .catch((error) => {
+            tratarErro(error);
+            throw error;
+        });
+
   const recuperarProdutosPaginadosPeloNomeDaCategoria = (config: AxiosRequestConfig) =>
     axiosInstance
       .get<ResultadoPaginado<Produto>>(URL_PRODUTOS + "/categoria/paginacao", config)
@@ -50,6 +59,6 @@ const useAPIProduto = () => {
     }
   };
 
-  return { recuperarProdutosPorNomeDaCategoria, recuperarProdutosPaginadosPeloNomeDaCategoria };
+  return { recuperarProdutosPorNomeDaCategoria, recuperarProdutosPaginadosPeloNomeDaCategoria, recuperarUmProduto };
 };
 export default useAPIProduto;
