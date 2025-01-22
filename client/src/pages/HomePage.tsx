@@ -9,14 +9,14 @@ const HomePage = () => {
           <NavLink aria-current="page" className="nav-link" to="/">
             Todos
           </NavLink>
-          <NavLink aria-current="page" className="nav-link" to="/frutas">
-            Frutas
+          <NavLink aria-current="page" className="nav-link" to="/animais-terrestres">
+            Terrestres
           </NavLink>
-          <NavLink aria-current="page" className="nav-link" to="/legumes">
-            Legumes
+          <NavLink aria-current="page" className="nav-link" to="/animais-aereos">
+            Aéreos
           </NavLink>
-          <NavLink aria-current="page" className="nav-link" to="/verduras">
-            Verduras
+          <NavLink aria-current="page" className="nav-link" to="/animais-marinhos">
+            Marinhos
           </NavLink>
         </div>
       </div>

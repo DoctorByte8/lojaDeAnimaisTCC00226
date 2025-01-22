@@ -11,7 +11,7 @@ function NavBar() {
             {/* style="text-decoration: none; font-size: 16px;" */}
             <Link to="/" style={{textDecoration: "none", fontSize: "16px"}}>
               <img className="d-none d-md-block" src={hortifruti} style={{ width: "60px" }} />
-              Hortifruti
+              ByteZoo
             </Link>
           </div>
           <div className="col-6">

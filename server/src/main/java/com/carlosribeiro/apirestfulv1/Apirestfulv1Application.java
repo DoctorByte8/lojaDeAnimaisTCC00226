@@ -43,18 +43,18 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		Usuario usuario = new Usuario("admin", "12345");
 		usuarioRepository.save(usuario);
 
-		Categoria fruta = new Categoria("Frutas");
+		Categoria fruta = new Categoria("animais-terrestres");
 		categoriaRepository.save(fruta);
 
-		Categoria legume = new Categoria("Legumes");
+		Categoria legume = new Categoria("animais-aereos");
 		categoriaRepository.save(legume);
 
-		Categoria verdura = new Categoria("Verduras");
+		Categoria verdura = new Categoria("animais-marinhos");
 		categoriaRepository.save(verdura);
 
 		Produto produto = new Produto(
 				"abacate.png",
-				"Abacate",
+				"Cachorro",
 				"1 unidade aprox. 750g",
 				true,
 				100,
@@ -184,7 +184,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				fruta);
 		produtoRepository.save(produto);
 
-		produto = new Produto(
+		/*produto = new Produto(
 				"abacate.png",
 				"Abacate",
 				"1 unidade aprox. 750g",
@@ -193,7 +193,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				BigDecimal.valueOf(2.45),
 				LocalDate.of(2023, 4, 26),
 				fruta);
-		produtoRepository.save(produto);
+		produtoRepository.save(produto);*/
 
 		produto = new Produto(
 				"abobrinha.png",
@@ -316,7 +316,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				fruta);
 		produtoRepository.save(produto);
 
-		produto = new Produto(
+		/*produto = new Produto(
 				"abacate.png",
 				"Abacate",
 				"1 unidade aprox. 750g",
@@ -325,7 +325,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				BigDecimal.valueOf(2.45),
 				LocalDate.of(2023, 4, 26),
 				fruta);
-		produtoRepository.save(produto);
+		produtoRepository.save(produto);*/
 
 		produto = new Produto(
 				"abobrinha.png",
