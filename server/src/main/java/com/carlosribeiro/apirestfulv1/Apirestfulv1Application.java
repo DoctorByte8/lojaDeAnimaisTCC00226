@@ -52,10 +52,11 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		Categoria verdura = new Categoria("animais-marinhos");
 		categoriaRepository.save(verdura);
 
+		//TERRESTRES
 		Produto produto = new Produto(
-				"abacate.png",
+				"cachorro.png",
 				"Cachorro",
-				"1 unidade aprox. 750g",
+				"O melhor amigo do homem!",
 				true,
 				100,
 				BigDecimal.valueOf(2.45),
@@ -63,389 +64,486 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				fruta);
 		produtoRepository.save(produto);
 
+		//TERRESTRES
 		produto = new Produto(
-				"abobrinha.png",
-				"Abobrinha",
-				"1 unidade aprox. 250g",
-				false,
-				500,
-				BigDecimal.valueOf(1.1),
-				LocalDate.of(2023, 5, 22),
-				legume);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"abobora.png",
-				"Abóbora",
-				"1 unidade aprox. 1,9kg",
-				true,
-				400,
-				BigDecimal.valueOf(4.7),
-				LocalDate.of(2023, 3, 24),
-				legume);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"acelga.png",
-				"Acelga",
-				"1 maço de aprox. 400g",
-				true,
-				120,
-				BigDecimal.valueOf(4.99),
-				LocalDate.of(2023, 3, 12),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"agriao.png",
-				"Agrião",
-				"1 maço de aprox. 200g",
-				true,
-				340,
-				BigDecimal.valueOf(2.5),
-				LocalDate.of(2023, 5, 17),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"alface.png",
-				"Alface",
-				"1 maço de aprox. 200g",
-				true,
-				220,
-				BigDecimal.valueOf(4.99),
-				LocalDate.of(2023, 5, 14),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"banana.png",
-				"Banana",
-				"1 unidade aprox. 165g",
-				true,
-				350,
-				BigDecimal.valueOf(1.05),
-				LocalDate.of(2023, 2, 22),
-				fruta);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"beringela.png",
-				"Beringela",
-				"1 unidade aprox. 370g",
-				true,
-				720,
-				BigDecimal.valueOf(1.85),
-				LocalDate.of(2023, 2, 23),
-				legume);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"brocolis.png",
-				"Brócolis",
-				"1 unidade aprox. 300g",
-				true,
-				600,
-				BigDecimal.valueOf(5.39),
-				LocalDate.of(2023, 3, 28),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"cebola.png",
-				"Cebola",
-				"1 unidade aprox. 200g",
-				true,
-				95,
-				BigDecimal.valueOf(0.56),
-				LocalDate.of(2023, 4, 30),
-				legume);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"cenoura.png",
-				"Cenoura",
-				"1 unidade aprox. 180g",
-				true,
-				350,
-				BigDecimal.valueOf(1.01),
-				LocalDate.of(2023, 5, 29),
-				legume);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"cereja.png",
-				"Cereja",
-				"1 unidade aprox. 250g",
-				true,
-				240,
-				BigDecimal.valueOf(11.23),
-				LocalDate.of(2023, 5, 11),
-				fruta);
-		produtoRepository.save(produto);
-
-		/*produto = new Produto(
-				"abacate.png",
-				"Abacate",
-				"1 unidade aprox. 750g",
+				"lobo.png",
+				"Lobo",
+				"Não tão amigo do homem assim...",
 				true,
 				100,
 				BigDecimal.valueOf(2.45),
 				LocalDate.of(2023, 4, 26),
 				fruta);
-		produtoRepository.save(produto);*/
-
-		produto = new Produto(
-				"abobrinha.png",
-				"Abobrinha",
-				"1 unidade aprox. 250g",
-				false,
-				500,
-				BigDecimal.valueOf(1.1),
-				LocalDate.of(2023, 5, 22),
-				legume);
 		produtoRepository.save(produto);
 
+		//TERRESTRES
 		produto = new Produto(
-				"abobora.png",
-				"Abóbora",
-				"1 unidade aprox. 1,9kg",
-				true,
-				400,
-				BigDecimal.valueOf(4.7),
-				LocalDate.of(2023, 3, 24),
-				legume);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"acelga.png",
-				"Acelga",
-				"1 maço de aprox. 400g",
-				true,
-				120,
-				BigDecimal.valueOf(4.99),
-				LocalDate.of(2023, 3, 12),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"agriao.png",
-				"Agrião",
-				"1 maço de aprox. 200g",
-				true,
-				340,
-				BigDecimal.valueOf(2.5),
-				LocalDate.of(2023, 5, 17),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"alface.png",
-				"Alface",
-				"1 maço de aprox. 200g",
-				true,
-				220,
-				BigDecimal.valueOf(4.99),
-				LocalDate.of(2023, 5, 14),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"banana.png",
-				"Banana",
-				"1 unidade aprox. 165g",
-				true,
-				350,
-				BigDecimal.valueOf(1.05),
-				LocalDate.of(2023, 2, 22),
-				fruta);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"beringela.png",
-				"Beringela",
-				"1 unidade aprox. 370g",
-				true,
-				720,
-				BigDecimal.valueOf(1.85),
-				LocalDate.of(2023, 2, 23),
-				legume);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"brocolis.png",
-				"Brócolis",
-				"1 unidade aprox. 300g",
-				true,
-				600,
-				BigDecimal.valueOf(5.39),
-				LocalDate.of(2023, 3, 28),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"cebola.png",
-				"Cebola",
-				"1 unidade aprox. 200g",
-				true,
-				95,
-				BigDecimal.valueOf(0.56),
-				LocalDate.of(2023, 4, 30),
-				legume);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"cenoura.png",
-				"Cenoura",
-				"1 unidade aprox. 180g",
-				true,
-				350,
-				BigDecimal.valueOf(1.01),
-				LocalDate.of(2023, 5, 29),
-				legume);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"cereja.png",
-				"Cereja",
-				"1 unidade aprox. 250g",
-				true,
-				240,
-				BigDecimal.valueOf(11.23),
-				LocalDate.of(2023, 5, 11),
-				fruta);
-		produtoRepository.save(produto);
-
-		/*produto = new Produto(
-				"abacate.png",
-				"Abacate",
-				"1 unidade aprox. 750g",
+				"raposa.png",
+				"Raposa",
+				"Mais ou menos amigo do homem?",
 				true,
 				100,
 				BigDecimal.valueOf(2.45),
 				LocalDate.of(2023, 4, 26),
 				fruta);
-		produtoRepository.save(produto);*/
-
-		produto = new Produto(
-				"abobrinha.png",
-				"Abobrinha",
-				"1 unidade aprox. 250g",
-				false,
-				500,
-				BigDecimal.valueOf(1.1),
-				LocalDate.of(2023, 5, 22),
-				legume);
 		produtoRepository.save(produto);
 
+		//TERRESTRES
 		produto = new Produto(
-				"abobora.png",
-				"Abóbora",
-				"1 unidade aprox. 1,9kg",
+				"gato.png",
+				"Gato",
+				"Melhor amiga da mulher!",
 				true,
-				400,
-				BigDecimal.valueOf(4.7),
-				LocalDate.of(2023, 3, 24),
-				legume);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"acelga.png",
-				"Acelga",
-				"1 maço de aprox. 400g",
-				true,
-				120,
-				BigDecimal.valueOf(4.99),
-				LocalDate.of(2023, 3, 12),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"agriao.png",
-				"Agrião",
-				"1 maço de aprox. 200g",
-				true,
-				340,
-				BigDecimal.valueOf(2.5),
-				LocalDate.of(2023, 5, 17),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"alface.png",
-				"Alface",
-				"1 maço de aprox. 200g",
-				true,
-				220,
-				BigDecimal.valueOf(4.99),
-				LocalDate.of(2023, 5, 14),
-				verdura);
-		produtoRepository.save(produto);
-
-		produto = new Produto(
-				"banana.png",
-				"Banana",
-				"1 unidade aprox. 165g",
-				true,
-				350,
-				BigDecimal.valueOf(1.05),
-				LocalDate.of(2023, 2, 22),
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
 
+		//TERRESTRES
 		produto = new Produto(
-				"beringela.png",
-				"Beringela",
-				"1 unidade aprox. 370g",
+				"leao.png",
+				"Leão",
+				"Rei da selva.",
 				true,
-				720,
-				BigDecimal.valueOf(1.85),
-				LocalDate.of(2023, 2, 23),
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"Tigre.png",
+				"Tigre",
+				"Gato super saiyajins.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"pantera.png",
+				"Pantera",
+				"...cor de rosa.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"panda.png",
+				"Panda",
+				"É o draguão guerreiro.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"ursopolar.png",
+				"Urso polar",
+				"Adora uma Coca-Cola.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"ursopardo.png",
+				"Urso pardo",
+				"Deu um Oscar pro DiCaprio.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"Urso negro.png",
+				"Urso-negro",
+				"Mancinho. Bom de ter pra família.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"lemure.png",
+				"Lêmure",
+				"Eu mi remexo muito!",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"javali.png",
+				"Javali",
+				"Hakuna matata.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"girafa.png",
+				"Girafa",
+				"Serve um bom PF.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"chimpanze.png",
+				"Chimpanzé",
+				"Mais inteligente que algumas pessoas.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"miquinho.png",
+				"Miquinho",
+				"Super fofo.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"micoleaodourado.png",
+				"Mico Leão Dourado",
+				"Nota 20 de 10.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"gorila.png",
+				"Gorila",
+				"Estrela de Hollywood. Protagonista do King Kong.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//TERRESTRES
+		produto = new Produto(
+				"unicornio.png",
+				"Unicórnio",
+				"Pôneis malditos!",
+				true,
+				1,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				fruta);
+		produtoRepository.save(produto);
+
+		//AEREOS
+		produto = new Produto(
+				"fenix.png",
+				"Fénix",
+				"Salvou o Harry Potter do Basilisco.",
+				true,
+				1,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
 				legume);
 		produtoRepository.save(produto);
 
+		//AEREOS
 		produto = new Produto(
-				"brocolis.png",
-				"Brócolis",
-				"1 unidade aprox. 300g",
+				"dragao.png",
+				"Dragão",
+				"DRACARYS!!!",
 				true,
-				600,
-				BigDecimal.valueOf(5.39),
-				LocalDate.of(2023, 3, 28),
+				1,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				legume);
+		produtoRepository.save(produto);
+
+		//AEREOS
+		produto = new Produto(
+				"aguia.png",
+				"Águia",
+				"Símbolo americano.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				legume);
+		produtoRepository.save(produto);
+
+		//AEREOS
+		produto = new Produto(
+				"falcao.png",
+				"Falcão",
+				"Mais legal que a águia.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				legume);
+		produtoRepository.save(produto);
+
+		//AEREOS
+		produto = new Produto(
+				"tucano.png",
+				"Tucano",
+				"Tucano ou Micano?",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				legume);
+		produtoRepository.save(produto);
+
+		//AEREOS
+		produto = new Produto(
+				"morcego.png",
+				"Morcego",
+				"Minha pele é a PELE DE UM ASSASSINO, BELLA!",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				legume);
+		produtoRepository.save(produto);
+
+		//AEREOS
+		produto = new Produto(
+				"rolinha.png",
+				"Rolinha",
+				"( ͡° ͜ʖ ͡°)",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				legume);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"beijaflor.png",
+				"Beija-flor",
+				"Aviso: ele só dá selinhos, não faz de língua.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
 
+
+		//MARINHOS
 		produto = new Produto(
-				"cebola.png",
-				"Cebola",
-				"1 unidade aprox. 200g",
+				"bemtevi.png",
+				"Bem te vi",
+				"Adora nos acordar de manhã.",
 				true,
-				95,
-				BigDecimal.valueOf(0.56),
-				LocalDate.of(2023, 4, 30),
-				legume);
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
 		produtoRepository.save(produto);
 
+
+		//MARINHOS
 		produto = new Produto(
-				"cenoura.png",
-				"Cenoura",
-				"1 unidade aprox. 180g",
+				"gaivota.png",
+				"Gaivota",
+				"Méu Méu Méu",
 				true,
-				350,
-				BigDecimal.valueOf(1.01),
-				LocalDate.of(2023, 5, 29),
-				legume);
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
 		produtoRepository.save(produto);
 
+
+		//MARINHOS
 		produto = new Produto(
-				"cereja.png",
-				"Cereja",
-				"1 unidade aprox. 250g",
+				"jacare.png",
+				"Jacaré",
+				"Marinho ou terrestre?",
 				true,
-				240,
-				BigDecimal.valueOf(11.23),
-				LocalDate.of(2023, 5, 11),
-				fruta);
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"tubarao.png",
+				"Tubarão",
+				"Olha a onda, olha a onda! Cuidado que o tubarão vai te pegar! TUDUM TUDUM TUDUM",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"baleia.png",
+				"Baleia",
+				"PrOCurANDo o NEMo. OndE É que ELe estÁ?",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"arraia.png",
+				"Arraia",
+				"Matou o Steve Irwin.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"lula.png",
+				"Lula",
+				"Meu companheiro.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"tartaruga.png",
+				"Tartaruga",
+				"Isso foi irado, cara!",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"foca.png",
+				"Foca",
+				"Cachorro marinho.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"estreladomar.png",
+				"Estrela do mar",
+				"Melhor amigo da esponja do mar.",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"pocotodomar.png",
+				"Pocoto do mar",
+				"O macho fica grávido ºOº",
+				true,
+				100,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"leviata.png",
+				"Leviatã",
+				"Baleia ou cobra?",
+				true,
+				1,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
+		produtoRepository.save(produto);
+
+
+		//MARINHOS
+		produto = new Produto(
+				"kraken.png",
+				"Kraken",
+				"RELEASE THE KRAKEN!",
+				true,
+				1,
+				BigDecimal.valueOf(2.45),
+				LocalDate.of(2023, 4, 26),
+				verdura);
 		produtoRepository.save(produto);
 	}
 }
