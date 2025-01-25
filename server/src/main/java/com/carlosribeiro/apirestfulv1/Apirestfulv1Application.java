@@ -40,7 +40,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		Usuario usuario = new Usuario("admin", "12345");
+		Usuario usuario = new Usuario("senha", "senha");
 		usuarioRepository.save(usuario);
 
 		Categoria fruta = new Categoria("animais-terrestres");
@@ -59,7 +59,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"O melhor amigo do homem!",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(1000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -71,7 +71,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Não tão amigo do homem assim...",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(2000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -83,7 +83,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Mais ou menos amigo do homem?",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(3000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -95,7 +95,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Melhor amiga da mulher!",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(700),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -107,19 +107,19 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Rei da selva.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(20000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
 
 		//TERRESTRES
 		produto = new Produto(
-				"Tigre.png",
+				"tigre.png",
 				"Tigre",
 				"Gato super saiyajins.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(30000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -131,7 +131,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"...cor de rosa.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(28000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -143,7 +143,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"É o draguão guerreiro.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(2500),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -155,7 +155,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Adora uma Coca-Cola.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(65000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -167,19 +167,19 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Deu um Oscar pro DiCaprio.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(32000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
 
 		//TERRESTRES
 		produto = new Produto(
-				"Urso negro.png",
+				"ursonegro.png",
 				"Urso-negro",
 				"Mancinho. Bom de ter pra família.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(10000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -191,7 +191,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Eu mi remexo muito!",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(6500),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -203,7 +203,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Hakuna matata.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(300),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -215,7 +215,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Serve um bom PF.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(18000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -227,7 +227,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Mais inteligente que algumas pessoas.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(7000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -239,7 +239,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Super fofo.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(3000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -250,8 +250,8 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Mico Leão Dourado",
 				"Nota 20 de 10.",
 				true,
-				100,
-				BigDecimal.valueOf(2.45),
+				12,
+				BigDecimal.valueOf(200000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -263,7 +263,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Estrela de Hollywood. Protagonista do King Kong.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(24000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -274,8 +274,8 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Unicórnio",
 				"Pôneis malditos!",
 				true,
-				1,
-				BigDecimal.valueOf(2.45),
+				10,
+				BigDecimal.valueOf(1000000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
 		produtoRepository.save(produto);
@@ -287,7 +287,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Salvou o Harry Potter do Basilisco.",
 				true,
 				1,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(100000000),
 				LocalDate.of(2023, 4, 26),
 				legume);
 		produtoRepository.save(produto);
@@ -298,8 +298,8 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Dragão",
 				"DRACARYS!!!",
 				true,
-				1,
-				BigDecimal.valueOf(2.45),
+				3,
+				BigDecimal.valueOf(2000000000),
 				LocalDate.of(2023, 4, 26),
 				legume);
 		produtoRepository.save(produto);
@@ -311,7 +311,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Símbolo americano.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(2000),
 				LocalDate.of(2023, 4, 26),
 				legume);
 		produtoRepository.save(produto);
@@ -323,7 +323,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Mais legal que a águia.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(1200),
 				LocalDate.of(2023, 4, 26),
 				legume);
 		produtoRepository.save(produto);
@@ -335,7 +335,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Tucano ou Micano?",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(50000),
 				LocalDate.of(2023, 4, 26),
 				legume);
 		produtoRepository.save(produto);
@@ -347,7 +347,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Minha pele é a PELE DE UM ASSASSINO, BELLA!",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(250),
 				LocalDate.of(2023, 4, 26),
 				legume);
 		produtoRepository.save(produto);
@@ -359,7 +359,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"( ͡° ͜ʖ ͡°)",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(75),
 				LocalDate.of(2023, 4, 26),
 				legume);
 		produtoRepository.save(produto);
@@ -372,9 +372,9 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Aviso: ele só dá selinhos, não faz de língua.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(120),
 				LocalDate.of(2023, 4, 26),
-				verdura);
+				legume);
 		produtoRepository.save(produto);
 
 
@@ -385,35 +385,9 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Adora nos acordar de manhã.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(250),
 				LocalDate.of(2023, 4, 26),
-				verdura);
-		produtoRepository.save(produto);
-
-
-		//MARINHOS
-		produto = new Produto(
-				"gaivota.png",
-				"Gaivota",
-				"Méu Méu Méu",
-				true,
-				100,
-				BigDecimal.valueOf(2.45),
-				LocalDate.of(2023, 4, 26),
-				verdura);
-		produtoRepository.save(produto);
-
-
-		//MARINHOS
-		produto = new Produto(
-				"jacare.png",
-				"Jacaré",
-				"Marinho ou terrestre?",
-				true,
-				100,
-				BigDecimal.valueOf(2.45),
-				LocalDate.of(2023, 4, 26),
-				verdura);
+				legume);
 		produtoRepository.save(produto);
 
 
@@ -424,7 +398,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Olha a onda, olha a onda! Cuidado que o tubarão vai te pegar! TUDUM TUDUM TUDUM",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(1500),
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
@@ -437,7 +411,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"PrOCurANDo o NEMo. OndE É que ELe estÁ?",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(95000),
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
@@ -450,7 +424,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Matou o Steve Irwin.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(70000),
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
@@ -463,7 +437,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Meu companheiro.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(400),
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
@@ -476,7 +450,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Isso foi irado, cara!",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(650),
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
@@ -489,7 +463,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Cachorro marinho.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(3700),
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
@@ -502,7 +476,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Melhor amigo da esponja do mar.",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(80),
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
@@ -511,11 +485,11 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		//MARINHOS
 		produto = new Produto(
 				"pocotodomar.png",
-				"Pocoto do mar",
+				"Cavalo-marinho",
 				"O macho fica grávido ºOº",
 				true,
 				100,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(25),
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
@@ -528,7 +502,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"Baleia ou cobra?",
 				true,
 				1,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(2000500000),
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
@@ -541,7 +515,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				"RELEASE THE KRAKEN!",
 				true,
 				1,
-				BigDecimal.valueOf(2.45),
+				BigDecimal.valueOf(2146999999),
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);

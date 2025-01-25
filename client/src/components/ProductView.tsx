@@ -40,7 +40,12 @@ const ProductView = ({idstring} : Props) => {
     };
     if (errorRemocaoProduto) throw errorRemocaoProduto;
 
-
+    if (!(produto == null)){
+      console.log(produto.imagem);
+    } else {
+      console.log("Produto nulo");
+    }
+    
   return (
     <>
       {!(produto == null) ? (
@@ -59,7 +64,7 @@ const ProductView = ({idstring} : Props) => {
           <div style={{ textAlign: "center", marginBottom: "20px" }}>
             {produto.imagem ? (
               <img
-                src={produto.imagem}
+                src={"../public/" + produto.imagem}
                 alt={produto.nome}
                 style={{ maxWidth: "100%", height: "auto", borderRadius: "8px" }}
               />
