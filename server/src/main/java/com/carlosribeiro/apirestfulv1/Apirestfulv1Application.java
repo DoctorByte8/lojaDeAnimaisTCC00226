@@ -1,15 +1,21 @@
 package com.carlosribeiro.apirestfulv1;
 
 import com.carlosribeiro.apirestfulv1.model.Categoria;
+import com.carlosribeiro.apirestfulv1.model.LittleCar;
+import com.carlosribeiro.apirestfulv1.model.LittleCarItem;
 import com.carlosribeiro.apirestfulv1.model.Produto;
 import com.carlosribeiro.apirestfulv1.model.Usuario;
 import com.carlosribeiro.apirestfulv1.repository.CategoriaRepository;
 import com.carlosribeiro.apirestfulv1.repository.ProdutoRepository;
 import com.carlosribeiro.apirestfulv1.repository.UsuarioRepository;
+import com.carlosribeiro.apirestfulv1.repository.LittleCarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.List;
+import java.util.ArrayList;
+
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -18,15 +24,18 @@ import java.time.LocalDate;
 public class Apirestfulv1Application implements CommandLineRunner {
 
 	private final ProdutoRepository produtoRepository;
+	private final LittleCarRepository littleCarRepository;
 	private final CategoriaRepository categoriaRepository;
 	private final UsuarioRepository usuarioRepository;
 
 	public Apirestfulv1Application(ProdutoRepository produtoRepository,
 								   CategoriaRepository categoriaRepository,
-								   UsuarioRepository usuarioRepository) {
+								   UsuarioRepository usuarioRepository,
+								   LittleCarRepository littleCarRepository) {
 		this.produtoRepository = produtoRepository;
 		this.categoriaRepository = categoriaRepository;
 		this.usuarioRepository = usuarioRepository;
+		this.littleCarRepository = littleCarRepository;
 	}
 
 //	@Autowired
@@ -53,7 +62,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		categoriaRepository.save(verdura);
 
 		//TERRESTRES
-		Produto produto = new Produto(
+		Produto produto1 = new Produto(
 				"cachorro.png",
 				"Cachorro",
 				"O melhor amigo do homem!",
@@ -62,10 +71,10 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				BigDecimal.valueOf(1000),
 				LocalDate.of(2023, 4, 26),
 				fruta);
-		produtoRepository.save(produto);
+		produtoRepository.save(produto1);
 
 		//TERRESTRES
-		produto = new Produto(
+		Produto produto = new Produto(
 				"lobo.png",
 				"Lobo",
 				"Não tão amigo do homem assim...",
@@ -89,7 +98,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produtoRepository.save(produto);
 
 		//TERRESTRES
-		produto = new Produto(
+		Produto produto2 = new Produto(
 				"gato.png",
 				"Gato",
 				"Melhor amiga da mulher!",
@@ -98,7 +107,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				BigDecimal.valueOf(700),
 				LocalDate.of(2023, 4, 26),
 				fruta);
-		produtoRepository.save(produto);
+		produtoRepository.save(produto2);
 
 		//TERRESTRES
 		produto = new Produto(
@@ -353,7 +362,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produtoRepository.save(produto);
 
 		//AEREOS
-		produto = new Produto(
+		Produto produto3 = new Produto(
 				"rolinha.png",
 				"Rolinha",
 				"( ͡° ͜ʖ ͡°)",
@@ -362,7 +371,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				BigDecimal.valueOf(75),
 				LocalDate.of(2023, 4, 26),
 				legume);
-		produtoRepository.save(produto);
+		produtoRepository.save(produto3);
 
 
 		//MARINHOS
@@ -519,5 +528,18 @@ public class Apirestfulv1Application implements CommandLineRunner {
 				LocalDate.of(2023, 4, 26),
 				verdura);
 		produtoRepository.save(produto);
+
+		// Carrinho e Itens do Carrinho
+		LittleCarItem item1 = new LittleCarItem(produto1, 2); // 2 unidades de Cachorro
+		LittleCarItem item2 = new LittleCarItem(produto2, 3); // 3 unidades de Gato
+		LittleCarItem item3 = new LittleCarItem(produto3, 1); // 1 unidade de Tigre
+
+		List<LittleCarItem> items = new ArrayList<>();
+		items.add(item1);
+		items.add(item2);
+		items.add(item3);
+
+		LittleCar carrinho = new LittleCar(items);
+		littleCarRepository.save(carrinho);
 	}
 }
