@@ -10,7 +10,6 @@ interface Props {
 }
 
 const Card = ({imagem, titulo, descricao, preco, footer }: Props) => {
-  console.log(imagem);
     return (
       <>
         <div className="card h-100 border-0">

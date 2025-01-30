@@ -16,16 +16,30 @@ public class LittleCarService {
     @Autowired
     private LittleCarRepository littleCarRepository;
 
+    /**
+     * @param id
+     * @return
+     * @throws EntidadeNaoEncontradaException
+     */
     public List<LittleCarItem> recuperarItensDoCarrinho(Long id) {
         LittleCar carrinho = littleCarRepository.findById(id)
                 .orElseThrow(() -> new EntidadeNaoEncontradaException("Carrinho não encontrado com ID: " + id));
-        return carrinho.getItems(); // Retorna os itens do carrinho
+        return carrinho.getItems();
     }
 
+    /**
+     * @param carrinho
+     * @return
+     */
     public LittleCar cadastrarCarrinho(LittleCar carrinho) {
         return littleCarRepository.save(carrinho);
     }
 
+    /**
+     * @param carrinho
+     * @return
+     * @throws
+     */
     @Transactional
     public LittleCar alterarCarrinho(LittleCar carrinho) {
         littleCarRepository.findById(carrinho.getId())
@@ -34,6 +48,11 @@ public class LittleCarService {
         return littleCarRepository.save(carrinho);
     }
 
+
+    /**
+     * @param id
+     * @throws EntidadeNaoEncontradaException
+     */
     public void removerCarrinho(Long id) {
         if (!littleCarRepository.existsById(id)) {
             throw new EntidadeNaoEncontradaException("Carrinho número " + id + " não encontrado.");

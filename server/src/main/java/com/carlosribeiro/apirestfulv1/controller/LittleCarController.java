@@ -16,7 +16,7 @@ public class LittleCarController {
     @Autowired
     LittleCarService littleCarService;
 
-    @GetMapping("{idCarrinho}") // GET para http://localhost:8080/carrinho/1
+    @GetMapping("{idCarrinho}")
     public List<LittleCarItem> recuperarCarrinho(@PathVariable("idCarrinho") Long id) {
         return littleCarService.recuperarItensDoCarrinho(id);
     }

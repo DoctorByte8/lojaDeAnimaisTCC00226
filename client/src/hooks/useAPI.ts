@@ -9,7 +9,7 @@ const useAPI = <T>(endpoint: string) => {
 
   const recuperar = () =>
     axiosInstance
-      .get<T[]>(endpoint)
+      .get<T>(endpoint)
       .then((res) => res.data)
       .catch((error) => {
         tratarErro(error);
@@ -18,24 +18,23 @@ const useAPI = <T>(endpoint: string) => {
 
   const remover = (id: number) =>
     axiosInstance
-      .delete<T>(endpoint + "/" + id)
+      .delete(endpoint + "/" + id)
       .then((res) => res.data)
       .catch((error) => {
         tratarErro(error);
         throw error;
       });
 
-    const recuperarid = (id: number) =>
-        axiosInstance
-            .get<T>(endpoint + "/" + id)
-            .then((res) => res.data)
-            .catch((error) => {
-                tratarErro(error);
-                throw error;
-            });
+  const recuperarid = (id: number) =>
+    axiosInstance
+      .get<T>(endpoint + "/" + id)
+      .then((res) => res.data)
+      .catch((error) => {
+        tratarErro(error);
+        throw error;
+      });
 
-
-    const recuperarPagina = (config: AxiosRequestConfig) =>
+  const recuperarPagina = (config: AxiosRequestConfig) =>
     axiosInstance
       .get<ResultadoPaginado<T>>(endpoint + "/paginacao", config)
       .then((res) => res.data)
@@ -46,7 +45,7 @@ const useAPI = <T>(endpoint: string) => {
 
   const cadastrar = (obj: T) =>
     axiosInstance
-      .post<T>(endpoint, obj)
+      .post(endpoint, obj)
       .then((res) => res.data)
       .catch((error) => {
         tratarErro(error);
@@ -55,7 +54,7 @@ const useAPI = <T>(endpoint: string) => {
 
   const alterar = (obj: T) =>
     axiosInstance
-      .put<T>(endpoint, obj)
+      .put(endpoint, obj)
       .then((res) => res.data)
       .catch((error) => {
         tratarErro(error);
@@ -86,6 +85,7 @@ const useAPI = <T>(endpoint: string) => {
     }
   };
 
-  return { recuperar, remover, recuperarPagina, cadastrar, alterar,recuperarid };
+  return { recuperar, remover, recuperarPagina, cadastrar, alterar, recuperarid };
 };
+
 export default useAPI;

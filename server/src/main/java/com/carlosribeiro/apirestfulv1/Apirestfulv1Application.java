@@ -137,7 +137,7 @@ public class Apirestfulv1Application implements CommandLineRunner {
 		produto = new Produto(
 				"pantera.png",
 				"Pantera",
-				"...cor de rosa.",
+				"...cor de rosa?",
 				true,
 				100,
 				BigDecimal.valueOf(28000),

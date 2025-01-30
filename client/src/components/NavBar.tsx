@@ -24,12 +24,12 @@ function NavBar() {
               </li>
               <li className="d-flex justify-content-center">
                 <Link to="/cadastrar-produto" style={{ textDecoration: "none" }}>
-                  Cadastrar produto
+                  Cadastrar animal
                 </Link>
               </li>
               <li className="d-flex justify-content-center">
                 <Link to="/listar-produtos" style={{ textDecoration: "none" }}>
-                  Listar produtos
+                  Listar animais
                 </Link>
               </li>
             </ul>

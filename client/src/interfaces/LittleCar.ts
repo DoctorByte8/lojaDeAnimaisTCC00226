@@ -1,8 +1,6 @@
-import LittleCarItem from "./LittleCarItem.ts";
+import LittleCarItem from "./LittleCarItem";
 
-interface LittleCar {
+export default interface LittleCar {
   id: number;
   items: LittleCarItem[];
 }
-
-export default LittleCar;
